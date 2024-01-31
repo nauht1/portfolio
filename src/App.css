@@ -8,8 +8,9 @@
   --title-color-dark: hsl(var(--hue), var(--sat), 0%);
   --text-color: hsl(var(--hue), var(--sat), 48%);
   --header-text-color: hsl(var(--hue), var(--sat), 100%);
-  --body-color: hsl(var(--hue), var(--sat), 98%);
-  --container-color: #ffff;
+  /* --body-color: hsl(var(--hue), var(--sat), 98%); */
+  --body-color: #0D1117;
+  --container-color: #000000;
   --header-color: #000000;
 
   /* Font styles */
@@ -41,8 +42,10 @@ body, button, input, textarea {
 }
 
 body {
+  position: relative;
   background-color: var(--body-color);
   color: var(--text-color);
+  height: 2000px;
 }
 
 h1, h2, h3 {
