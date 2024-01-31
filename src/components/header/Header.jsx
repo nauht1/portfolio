@@ -1,9 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './header.css';
 
 const Header = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      setScrolled(scrollPosition > 10);
+    }
+
+    window.addEventListener('scroll', handleScroll);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    }
+  }, []);
+  
   return (
-    <header className="header">
+    <header className={scrolled ? 'header header-scrolled' : 'header'}>
       <nav className="nav container">
         <a href="index" className="nav__logo">Minh Thuận</a>
         <div className="nav__menu">
