@@ -1,0 +1,144 @@
+.about__data {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.about__description {
+  max-width: 600px;
+}
+
+.about__description {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.about__info, 
+.about__hobbies {
+  line-height: 1.6rem;
+}
+
+.highlight {
+  color: var(--logo-color);
+}
+
+.hobby__img {
+  width: 300px;
+  border: 2px solid var(--logo-color-dark);
+}
+
+.skillset__data {
+  display: flex;
+  justify-content: center;
+}
+
+.skillset__list {
+  display: grid;
+  grid-template-columns: repeat(5, 180px);
+  gap: 1rem;
+}
+
+.skillset__item {
+  border: 2px solid var(--logo-color-dark);
+  border-radius: 10px;
+  width: 180px;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform .5s ease-in-out;  
+  position: relative;
+  overflow: hidden;
+}
+
+.skillset__item:hover {
+  transform: scale(1.1);
+}
+
+.skillset__icon i {
+  font-size: 5rem;
+}
+
+/* https://codepen.io/alphardex/pen/vYEYGzp */
+/* =============================== */
+.skillset__item:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  background: linear-gradient(
+    60deg,
+    hsl(224, 84%, 59%),
+    hsl(269, 82%, 57%),
+    hsl(314, 83%, 59%),
+    hsl(359, 81%, 58%),
+    hsl(44, 81%, 58%),
+    hsl(89, 83%, 58%),
+    hsl(134, 87%, 56%),
+    hsl(179, 83%, 57%)
+  );
+  background-size: 300% 300%;
+  background-position: 0 50%;
+  border-radius: 10px;
+  animation: moveGradient 4s alternate infinite;
+}
+
+@keyframes moveGradient {
+  50% {
+    background-position: 100% 50%;
+  }
+}
+/* =============================== */
+
+.about__content {
+  width: 100%;
+  /* max-width: 1068px; */
+}
+
+.section__title {
+  font-size: 2.5rem;
+}
+
+ .section__subtitle {
+  width: 100%;
+  margin: 50px auto;
+  font-weight: var(--font-medium);
+  font-size: 2rem;
+}
+
+.section__subtitle::after {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: var(--logo-color-dark);
+  transform: rotate(45deg);
+  margin-left: 5px;
+}
+
+
+/* Responsive */
+/* Breakpoints */
+@media screen and (max-width: 1024px) { 
+  .about__description {
+    max-width: 400px;
+  } 
+  
+  .hobby__img {
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 768px) {  
+}
+
+@media screen and (max-width: 576px) {  
+}
+
+@media screen and (max-width: 350px) {  
+  
+}

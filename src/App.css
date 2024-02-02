@@ -100,7 +100,7 @@ img {
 
 .section__subtitle {
   display: block;
-  font-size: var(--small-font-size);
+  font-size: var(--normal-font-size);
   margin-bottom: 4rem;
 }
 
@@ -110,7 +110,7 @@ img {
 }
 
 .container {
-  max-width: 968px;
+  max-width: 1068px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -121,7 +121,7 @@ img {
 }
 
 /* Breakpoints */
-@media screen and (max-width: 992px) {  
+@media screen and (max-width: 1024px) {  
   .container {
     margin-left: var(--mb-1-5);
     margin-right: var(--mb-1-5);
