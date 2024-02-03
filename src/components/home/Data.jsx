@@ -7,10 +7,11 @@ const Data = () => {
       <h1 className="home__title">Ngô Minh Thuận</h1>
       <h3 className="home__subtitle">
       <i className='bx bx-code-block home__subtitle-icon'></i>
-        Software Engineering
+        Software Engineering*
       </h3>
       <p className="home__description">
-        I'm a software developer and now studying at HCM University of Technology and Education.
+        A 3rd-year student currently studying at Ho Chi Minh University of Technology and Education. <br /><br />
+        <span className='quote'><i>" There's a will, there's a way "</i></span>
       </p>
     </div>
   )

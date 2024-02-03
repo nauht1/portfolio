@@ -121,7 +121,7 @@ img {
 }
 
 /* Breakpoints */
-@media screen and (max-width: 1024px) {  
+@media screen and (max-width: 1081px) {  
   .container {
     margin-left: var(--mb-1-5);
     margin-right: var(--mb-1-5);

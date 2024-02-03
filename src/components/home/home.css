@@ -34,6 +34,22 @@
   color: var(--logo-color-dark);
 }
 
+.home__social-icon::after {
+  position: absolute;
+  content: attr(data-content);
+  display: none;
+  padding: 5px;
+  border-radius: 3px;
+  background-color: rgba(241, 224, 224, 0.5);
+  color: #fff;
+  font-size: var(--small-font-size);
+}
+
+.home__social-icon:hover::after {
+  display: inline-block;
+  transition: 10s ease-in;
+}
+
 .home__title {
   color: var(--logo-color);
   font-size: var(--big-font-size);
@@ -57,6 +73,21 @@
 
 .home__description {
   max-width: 500px;
+  position: relative;
+}
+
+.quote {
+  margin-left: 20px;
+}
+
+.quote::before {
+  content: "";
+  position: absolute;
+  background-color: var(--logo-color-dark);
+  width: 15px;
+  height: 15px;
+  left: 0;
+  transform: rotate(45deg);
 }
 
 @keyframes avaFrame {
@@ -75,6 +106,10 @@
 }
 
 @media screen and (max-width: 768px) {  
+  .section {
+    padding: 6rem 0 4rem;
+  }
+  
   .home__content {
     grid-template-columns: 1fr;
   }
