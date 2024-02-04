@@ -8,8 +8,12 @@ const Home = () => {
     <section id="home" className="home section">
     <div className="home__container container grid">
       <div className="home__content grid">
-        <div className="home__img"></div>
-
+        <div className="home__img">
+            <div className="corner top-left"></div>
+            <div className="corner top-right"></div>
+            <div className="corner bottom-left"></div>
+            <div className="corner bottom-right"></div>
+        </div>
         <Data />
 
         <Social />

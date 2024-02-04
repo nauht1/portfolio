@@ -6,13 +6,126 @@
 }
 
 .home__img {
+  position: relative;
   background: url(../../assets/images/user_img.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   width: 300px;
   height: 300px;
-  /* box-shadow: inset 0 0 0 5px rgb(255 255 255 / 30%); */
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px rgba(109, 66, 149, 0.8);
+}
+
+.corner {
+  position: absolute;
+  background-color: var(--logo-color);
+}
+
+.top-left {
+  top: -10px;
+  left: -10px;
+  width: 40px;
+  height: 10px;
+  animation: expColTopLeft 2s infinite alternate;
+}
+
+.top-right {
+  top: -10px;
+  right: -10px;
+  width: 40px;
+  height: 10px;
+  animation: expColTopRight 2s infinite alternate;
+}
+
+.bottom-left {
+  bottom: -10px;
+  left: -10px;
+  width: 40px;
+  height: 10px;
+  animation: expColBotLeft 2s infinite alternate;
+}
+
+.bottom-right {
+  bottom: -10px;
+  right: -10px;
+  width: 40px;
+  height: 10px;
+  animation: expColBotRight 2s infinite alternate;
+}
+
+.top-left::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 40px;
+  background-color: var(--logo-color);
+  left: 0;
+}
+
+.top-right::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 40px;
+  background-color: var(--logo-color);
+  right: 0;
+}
+
+.bottom-left::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 40px;
+  background-color: var(--logo-color);
+  bottom: 0;
+}
+
+.bottom-right::before {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 40px;
+  background-color: var(--logo-color);
+  bottom: 0;
+  right: 0;
+}
+
+
+@keyframes expColTopLeft {
+  0%, 100% {
+    transform: translate(-5px, -5px);
+  }
+  50% {
+    transform: translate(5px, 5px);
+  }
+}
+
+@keyframes expColTopRight {
+  0%, 100% {
+    transform: translate(-5px, 5px);
+  }
+  50% {
+    transform: translate(5px, -5px);
+  }
+}
+
+@keyframes expColBotLeft {
+  0%, 100% {
+    transform: translate(-5px, 5px);
+  }
+  50% {
+    transform: translate(5px, -5px);
+  }
+}
+
+@keyframes expColBotRight {
+  0%, 100% {
+    transform: translate(-5px, -5px);
+  }
+  50% {
+    transform: translate(5px, 5px);
+  }
 }
 
 .home__img:hover {
@@ -98,10 +211,6 @@
   transform: rotate(45deg);
 }
 
-@keyframes avaFrame {
-  /*  */
-}
-
 /* Responsive */
 @media screen and (max-width: 992px) {
   .home__title {
@@ -148,5 +257,8 @@
 }
 
 @media screen and (max-width: 350px) {  
-  
+  .home__img {
+    width: 250px;
+    height: 250px;
+  }
 }
