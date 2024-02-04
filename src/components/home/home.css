@@ -18,6 +18,7 @@
 .home__img:hover {
   animation: avaFrame 3s ease-in-out infinite;
 }
+
 .home__social {
   display: grid;
   grid-template-columns: max-content;
@@ -26,6 +27,7 @@
 }
 
 .home__social-icon {
+  position: relative;
   font-size: 2rem;
   color: var(--logo-color);
 }
@@ -43,6 +45,12 @@
   background-color: rgba(241, 224, 224, 0.5);
   color: #fff;
   font-size: var(--small-font-size);
+  bottom: 18%;
+  /* left: 100%; */
+  right: 100%;
+  width: auto;
+  white-space: nowrap;
+  overflow: visible;
 }
 
 .home__social-icon:hover::after {
@@ -129,6 +137,10 @@
   .home__social {
     display: flex;
     gap: 1rem;
+  }
+
+  .home__social-icon:hover::after {
+    display: none;
   }
 }
 
