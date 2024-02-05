@@ -7,7 +7,9 @@ import Timeline from "./Timeline";
 const About = () => {
   return (
     <section id="about" className="about section">
-      <h2 className="section__title">About me</h2>
+      <h2 className="section__title">
+        About<span className="highlight"> me</span>
+      </h2>
       <span className="section__subtitle">
         <span className="highlight">Intro</span>duction
       </span>

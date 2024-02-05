@@ -1,0 +1,174 @@
+.project__subtitle {
+  /* font-size: 1.1rem;
+  margin: auto;
+  left: 50%; */
+}
+.project__data {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4rem;
+  margin-top: 2rem;
+}
+
+.project__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid var(--logo-color-dark);
+  gap: 1rem;
+}
+
+.project__item .frame {
+  position: absolute;
+  inset: 0;
+  background: #000;
+  overflow: hidden;
+  z-index: -100;
+}
+
+/* https://www.youtube.com/watch?v=l2fzTLMm3z8 */
+.project__item .frame::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1000px;
+  height: 160px;
+  background: linear-gradient(transparent, #45f3ff, #45f3ff, 
+    #45f3ff, transparent);
+  animation: animate 4s linear infinite;
+  animation-play-state: paused;
+}
+
+.project__item:hover .frame::before {
+  animation-play-state: running;
+}
+
+.project__item .frame::after {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  background: var(--container-color);
+}
+
+@keyframes animate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+.project__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  height: 8%;
+  background-color: var(--logo-color-dark);
+  font-size: 1.5rem;
+  font-weight: var(--font-bold);
+  margin-top: 1rem;
+}
+
+.project__img {
+  background-image: url("../../assets/images/hollow_knight.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 250px;
+  height: 250px;
+  box-shadow: 0 0 0 1px rgba(109, 66, 149, 0.8);
+}
+
+.project__description {
+  max-width: 250px;
+  margin: .5rem;
+}
+
+.projects__btns {
+  display: flex;
+  margin-top: auto;
+}
+
+.project__source,
+.project__demo {
+  display: flex;
+  align-items: center;
+  padding: .5rem 1rem;
+  margin: 1rem .8rem;
+  outline: 1px solid var(--logo-color-dark);
+  color: var(--text-color);
+}
+
+.project__demo {
+  background-color: var(--logo-color-dark);
+}
+
+.btn__icon {
+  margin-right: 3px;
+}
+
+.project__source:hover,
+.project__demo:hover {
+  opacity: 0.8;
+}
+
+/* Breakpoints */
+@media screen and (max-width: 1081px) {
+  .project__data {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .project__img {
+    width: 280px;
+  }
+
+  .project__description{
+    max-width: 280px;
+  }
+}
+
+@media screen and (max-width: 768px) {  
+  .project__data {
+    grid-template-columns: repeat(1, 500px);
+    justify-content: center;
+  }
+
+  .project__title {
+    width: 60%;
+  }
+
+  .project__img {
+    width: 280px;
+  }
+
+  .project__description{
+    max-width: 350px;
+  }
+}
+
+@media screen and (max-width: 576px) {  
+  .project__data {
+    grid-template-columns: repeat(1, 300px);
+    justify-content: center;
+  }
+
+  .project__title {
+    width: 80%;
+  }
+
+  .project__img {
+    width: 240px;
+  }
+
+  .project__description{
+    margin: 0 1rem;
+  }
+}
+
+@media screen and (max-width: 350px) {  
+  
+}
