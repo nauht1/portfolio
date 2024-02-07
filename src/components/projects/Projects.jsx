@@ -8,9 +8,9 @@ const Projects = () => {
       <h2 className="section__title">
         <span className="highlight">Pro</span>jects
       </h2>
-      {/* <span className="project__subtitle">
-        <span><i>Update soon ...</i></span>
-      </span> */}
+      <span className="project__subtitle">
+        <span><i>Still being updated ...</i></span>
+      </span>
       <div className="projects__container container grid">
         <div className="projects__content grid">
           <Project />

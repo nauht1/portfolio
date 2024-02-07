@@ -1,7 +1,7 @@
 .project__subtitle {
-  /* font-size: 1.1rem;
-  margin: auto;
-  left: 50%; */
+  display: flex;
+  justify-content: center;
+  font-size: 1.1rem;
 }
 .project__data {
   display: grid;
@@ -36,8 +36,8 @@
   left: 50%;
   width: 1000px;
   height: 160px;
-  background: linear-gradient(transparent, #45f3ff, #45f3ff, 
-    #45f3ff, transparent);
+  background: linear-gradient(transparent, #5d97e7, #5d97e7, 
+    #5d97e7, transparent);
   animation: animate 4s linear infinite;
   animation-play-state: paused;
 }
