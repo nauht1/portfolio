@@ -1,8 +1,10 @@
-import React, {useState} from "react";
+import React, {useState, useRef} from "react";
+import emailjs from '@emailjs/browser';
 import './contact.css';
 
 const Contact = () => {
   const [activeInputs, setActiveInputs] = useState({ name: false, email: false, content: false });
+  const [formData, setFormData] = useState({ name: "", email: "", content: "" });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -10,16 +12,41 @@ const Contact = () => {
       ...prevState,
       [name]: value !== "" // Set active to true if value is not empty
     }));
+
+    // Clear input
+    setFormData(prevData => ({
+      ...prevData,
+      [name]: value
+    }));
   }
   
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_tozrzlm', 'template_q6ara2h', form.current, {
+        publicKey: 'OuZacvNS_2WQMIVpz',
+      })
+      .then(
+        () => {
+          alert('Sent mail successfully! ');
+          // Reset form data
+          setFormData({ name: "", email: "", content: "" });
+          // Reset active inputs
+          setActiveInputs({ name: false, email: false, content: false });
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+    }
   return (
     <section id="contact" className="contact section">
-    {/* <h2 className="section__title">
-      Contact
-    </h2> */}
     <div className="contact__container container grid">
       <div className="contact__content grid">
-        <form action="" className="contact__form">
+        <form ref={form} onSubmit={sendEmail} className="contact__form">
           <h2 className="section__title">
             <span className="highlight">Contact</span> me
             <i className='bx bx-mail-send contact__icon' ></i>
@@ -32,6 +59,7 @@ const Contact = () => {
                 name="name" 
                 className="input__content" 
                 onChange={handleChange}
+                value={formData.name}
                 required
                 placeholder="Enter your name"/>
             </li>
@@ -43,6 +71,7 @@ const Contact = () => {
                 className="input__content" 
                 onChange={handleChange}
                 required
+                value={formData.email}
                 placeholder="Enter your email"/>
             </li>
             <li className="input__item">
@@ -53,6 +82,7 @@ const Contact = () => {
                 className="input__content"
                 onChange={handleChange}
                 required
+                value={formData.content}
                 placeholder="Enter your content"></textarea>
             </li>
           </ul>
