@@ -93,9 +93,6 @@ textarea {
 }
 
 /* Breakpoints */
-@media screen and (max-width: 1081px) {  
-
-}
 
 @media screen and (max-width: 768px) {  
   .contact__form {
@@ -129,8 +126,4 @@ textarea {
   .input__label.active {
     transform: translate(150px, -30px);
   }
-}
-
-@media screen and (max-width: 350px) {  
-  
 }

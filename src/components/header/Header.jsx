@@ -6,7 +6,7 @@ const Header = () => {
   const [toggle, showMenu] = useState(false);
   const [clicked, setClicked] = useState('');
   const menuRef = useRef(null);
-
+  
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
@@ -19,12 +19,25 @@ const Header = () => {
       }
     }
 
+    const handleScrollActiveLink = () => {
+      const sections = document.querySelectorAll("section");
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        const sectionBottom = sectionTop + section.offsetHeight;
+        if (window.scrollY >= sectionTop && window.scrollY < sectionBottom) {
+          setClicked(section.id);
+        }
+      });
+    };
+
     window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScrollActiveLink);
     document.addEventListener('click', handleClickOutside);
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
       document.removeEventListener('click', handleClickOutside);
+      document.removeEventListener('scroll', handleScrollActiveLink);
     }
   }, []);
   

@@ -6,6 +6,7 @@ import Footer from './components/footer/Footer';
 import Header from './components/header/Header';
 import Home from './components/home/Home';
 import Projects from './components/projects/Projects';
+import ScrollUp from './components/scrollUp/ScrollUp';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Contact />
       </main>
       <Footer />
+      <ScrollUp />
     </>
   )
 }

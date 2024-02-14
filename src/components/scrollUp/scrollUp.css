@@ -1,0 +1,24 @@
+.scrollUp {
+  position: fixed;
+  right: 2rem;
+  bottom: -5rem;
+  font-size: 3rem;
+  color: var(--logo-color-dark);
+  cursor: pointer;
+  transition: transform 0.3s ease-in;
+}
+
+.scrollUp:hover {
+  opacity: .8;
+}
+
+.scrollUp.active {
+  transform: translateY(-10rem);
+}
+
+/* Breakpoints */
+@media screen and (max-width: 768px) {  
+  .scrollUp {
+    display: none;
+  }
+}
