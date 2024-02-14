@@ -94,8 +94,20 @@ img {
 }
 
 .section__title {
+  position: relative;
   font-size: var(--h1-font-size);
   color: var(--title-color);
+}
+
+.section__title::after {
+  position: absolute;
+  content: "";
+  top: -30%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 300px;
+  height: 5px;
+  background-color: var(--logo-color-dark);
 }
 
 .section__subtitle {
@@ -132,6 +144,9 @@ img {
 }
 
 @media screen and (max-width: 576px) {  
+  .section__title::after {
+    width: 100px;
+  }
 }
 
 @media screen and (max-width: 350px) {  

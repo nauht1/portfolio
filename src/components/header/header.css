@@ -76,6 +76,7 @@
   .header {
     top: inherit;
     bottom: 0;
+    background-color: var(--header-color);
   }
 
   .nav {

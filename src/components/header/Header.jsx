@@ -50,11 +50,6 @@ const Header = () => {
               </a>
             </li>
             <li className="nav__item">
-            <a href="#resume" className={"nav__link " + (clicked === 'resume' ? 'active-link' : '')} onClick={() => setClicked('resume')}>
-              <i className='bx bxs-notepad nav__icon'></i> Resume
-              </a>
-            </li>
-            <li className="nav__item">
             <a href="#contact" className={"nav__link " + (clicked === 'contact' ? 'active-link' : '')} onClick={() => setClicked('contact')}>
               <i className='bx bx-message-dots nav__icon'></i> Contact
               </a>

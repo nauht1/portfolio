@@ -5,7 +5,7 @@
 }
 .project__data {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 4rem;
   margin-top: 2rem;
 }
@@ -61,6 +61,7 @@
     transform: translate(-50%, -50%) rotate(360deg);
   }
 }
+
 .project__title {
   display: flex;
   align-items: center;
@@ -74,18 +75,18 @@
 }
 
 .project__img {
-  background-image: url("../../assets/images/hollow_knight.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   width: 250px;
   height: 250px;
   box-shadow: 0 0 0 1px rgba(109, 66, 149, 0.8);
 }
 
 .project__description {
-  max-width: 250px;
+  max-width: 350px;
   margin: .5rem;
+}
+
+.project__description a {
+  color: red;
 }
 
 .projects__btns {

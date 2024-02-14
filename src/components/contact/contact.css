@@ -13,7 +13,8 @@
 
 .contact__icon {
   position: absolute;
-  margin: 5px 10px;
+  margin: 5px 5px;
+  font-size: 1.6rem;
 }
 
 .form__title {
