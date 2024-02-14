@@ -1,0 +1,42 @@
+.footer {
+  width: 100%;
+  background-color: var(--header-color);
+}
+
+.copyright__data {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.copyright__text {
+  font-size: 1.1rem;
+}
+
+i.source__icon {
+  font-size: 2rem;
+  margin-left: 10px;
+  color: var(--logo-color);
+}
+
+i.source__icon:hover {
+  opacity: .7;
+}
+
+/* Breakpoints */
+@media screen and (max-width: 1081px) {  
+  .container {
+    margin-left: var(--mb-1-5);
+    margin-right: var(--mb-1-5);
+  }
+}
+
+/* BREAKPOINTS */
+
+@media screen and (max-width: 576px) { 
+  footer {
+    position: relative;
+    bottom: 50px;
+  }
+}
