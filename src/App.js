@@ -1,3 +1,6 @@
+import { useEffect } from 'react';
+import { inject, track } from '@vercel/analytics';
+
 import './App.css';
 import About from './components/about/About';
 import Background from './components/background/Background';
@@ -9,6 +12,11 @@ import Projects from './components/projects/Projects';
 import ScrollUp from './components/scrollUp/ScrollUp';
 
 function App() {
+  useEffect(() => {
+    const analytics = inject();
+    track(analytics, 'pageview');
+  }, []);
+
   return (
     <>
       <Background />
