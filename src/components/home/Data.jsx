@@ -7,7 +7,7 @@ const Data = () => {
       <h1 className="home__title">Ngô Minh Thuận</h1>
       <h3 className="home__subtitle">
       <i className='bx bx-code-block home__subtitle-icon'></i>
-        Software Engineering*
+        Software Engineer*
       </h3>
       <p className="home__description">
         A 3rd-year student currently studying at Ho Chi Minh University of Technology and Education. <br /><br />
