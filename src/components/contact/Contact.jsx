@@ -51,7 +51,7 @@ const Contact = () => {
             <span className="highlight">Contact</span> me
             <i className='bx bx-mail-send contact__icon' ></i>
           </h2>
-          <ul className="list__input">
+          {/* <ul className="list__input">
             <li className="input__item">
               <label className={`input__label ${activeInputs.name ? 'active' : ''}`}>Name</label>
               <input 
@@ -85,9 +85,10 @@ const Contact = () => {
                 value={formData.content}
                 placeholder="Enter your content"></textarea>
             </li>
-          </ul>
+          </ul> */}
           <div className="send__btn">
-            <input type="submit" value="Send" />
+            {/* <input type="submit" value="Send"/> */}
+            <input type="submit" value="Temporarily disabled" disabled style={{ fontSize: '.9rem'}} />
           </div>
         </form>
       </div>
