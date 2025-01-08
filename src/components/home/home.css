@@ -7,11 +7,10 @@
 
 .home__img {
   position: relative;
-  background: url(../../assets/images/catGit.png);
+  background: url(../../assets/images/avatar.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-size: 150%;
   width: 300px;
   height: 300px;
   border-radius: 50%;
