@@ -11,7 +11,7 @@ const Info = () => {
         <span className="highlight"> Ngo Minh Thuan </span> 
           from 
           <span className="highlight"> Ho Chi Minh, Viet Nam.</span> <br />
-          I'm currently a third-year student at 
+          I'm a final-year student at 
           the HCM University of Technology and Education 
           <span className="highlight"> (HCMUTE)</span>.
           My major is software engineering. <br />

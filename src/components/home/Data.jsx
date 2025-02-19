@@ -10,7 +10,7 @@ const Data = () => {
         Software Engineer*
       </h3>
       <p className="home__description">
-        A 3rd-year student currently studying at Ho Chi Minh University of Technology and Education. <br /><br />
+        A final-year student currently studying at Ho Chi Minh University of Technology and Education. <br /><br />
         <span className='quote'><i>" There's a will, there's a way "</i></span>
       </p>
     </div>
